@@ -17,7 +17,7 @@ app.use(express.json());
 const PORT=process.env.PORT ||5000;
 //yLPGp7p8W2RCoDVt     arvindm22cse
 const __dirname=path.resolve();
-app.use("/api/products",productRoutes);
+app.use("http://localhost:5000/api/products",productRoutes);
 if(process.env.NODE_ENV==="production"){
     app.use(express.static(path.join(__dirname,"/frontend/dist"))); 
 app.get("*",(req,res)=>{
